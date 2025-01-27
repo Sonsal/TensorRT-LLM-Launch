@@ -1,11 +1,11 @@
 
 # TensorRT-LLM: A Tutorial On Getting Started
 
-Beginner-friendly tutorial for Tensor-RT-LLM using BLOOM-560M as an example model.
-
-Video walkthrough and explanation:
-
-[![Youtube video link](https://img.youtube.com/vi/TwWqPnuNHV8/0.jpg)](https://youtu.be/TwWqPnuNHV8)
+# Sources
+- https://img.youtube.com/vi/TwWqPnuNHV8/0.jpg - TensorRT-LLM setup
+- https://www.youtube.com/watch?v=30NWbHesXCY&ab_channel=ContainerBytes - Triton+TensorRT-LLM
+- https://github.com/triton-inference-server/tutorials/blob/main/Popular_Models_Guide/Llama2/trtllm_guide.md - Official guide to Llama2 - 7b
+- https://medium.com/trendyol-tech/deploying-a-large-language-model-llm-with-tensorrt-llm-on-triton-inference-server-a-step-by-step-d53fccc856fa - Meduim guide how to launch TRT model
 
 ### Accelerating BLOOM 560M Inference with TensorRT-LLM
 
@@ -19,7 +19,7 @@ This Jupyter notebook demonstrates the optimization of the BLOOM 560M model, a l
 
 Or run the docker container and install Jupyter there:
 ```bash
-docker run --rm --runtime=nvidia --gpus all --entrypoint /bin/bash -it nvidia/cuda:12.1.0-devel-ubuntu22.04
+docker run -it --gpus all --network host --name tensor_rt_llm --entrypoint /bin/bash -it nvidia/cuda:12.1.0-devel-ubuntu22.04
 ```
 
 
